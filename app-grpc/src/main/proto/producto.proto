@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.acme.producto.grpc.proto";
+option java_outer_classname = "ProductoProto";
+
+package producto;
+
+message ProductoMessage {
+  string id = 1;
+  string nombre = 2;
+  string descripcion = 3;
+  string precio = 4;
+}
+
+message CreateProductoRequest {
+  string nombre = 1;
+  string descripcion = 2;
+  string precio = 3;
+}
+
+message UpdateProductoRequest {
+  string id = 1;
+  string nombre = 2;
+  string descripcion = 3;
+  string precio = 4;
+}
+
+message GetProductoByIdRequest {
+  string id = 1;
+}
+
+message GetAllProductosRequest {
+}
+
+message GetAllProductosResponse {
+  repeated ProductoMessage productos = 1;
+}
+
+message DeleteProductoRequest {
+  string id = 1;
+}
+
+message DeleteProductoResponse {
+  bool deleted = 1;
+}
+
+service ProductoService {
+  rpc CreateProducto(CreateProductoRequest) returns (ProductoMessage);
+  rpc GetProductoById(GetProductoByIdRequest) returns (ProductoMessage);
+  rpc GetAllProductos(GetAllProductosRequest) returns (GetAllProductosResponse);
+  rpc UpdateProducto(UpdateProductoRequest) returns (ProductoMessage);
+  rpc DeleteProducto(DeleteProductoRequest) returns (DeleteProductoResponse);
+}
