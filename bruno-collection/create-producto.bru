@@ -1,0 +1,18 @@
+meta {
+  name: Create Producto
+  type: grpc
+  seq: 1
+}
+
+grpc {
+  url: localhost:9090
+  method: producto.ProductoService/CreateProducto
+}
+
+body {
+  {
+    "nombre": "Laptop",
+    "descripcion": "Laptop gaming 16GB RAM",
+    "precio": "1299.99"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "java-grpc",
+  "version": "1.0.0",
+  "description": "Servicio backend construido con **Spring Boot** y **gRPC** que expone un CRUD completo de productos. Aplica **arquitectura hexagonal (Ports & Adapters)** para mantener el dominio de negocio independiente del framework, la base de datos y el protocolo de comunicación.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyozmen/Java-gRPC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zyozmen/Java-gRPC/issues"
+  },
+  "homepage": "https://github.com/zyozmen/Java-gRPC#readme"
+}
